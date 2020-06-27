@@ -1,7 +1,6 @@
 class Pessoa:
 
-    def __init__(self, nome=None, idade=None, sexo=None):
-        self.sexo = sexo
+    def __init__(self, nome=None, idade=None):
         self.idade = idade
         self.nome = nome
 
