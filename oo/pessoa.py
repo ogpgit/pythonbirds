@@ -1,6 +1,7 @@
 class Pessoa:
 
-    def __init__(self, nome = None, idade = 36):
+    def __init__(self, nome=None, idade=None, sexo=None):
+        self.sexo = sexo
         self.idade = idade
         self.nome = nome
 
@@ -8,11 +9,6 @@ class Pessoa:
         return f'Olá {id(self)}'
 
 if __name__ == '__main__':
-    p = Pessoa('Luciano', 40)
+    p = Pessoa('Osvaldo')
     print(id(p))
-    print(Pessoa.comprimentar(p))
-    print(p.comprimentar())
-    print(p.nome)
-    p.nome = 'Osvaldo'
-    print(p.nome)
-    print(p.idade)
+    print(f'Nome: {p.nome} - Idade: {p.idade}')
