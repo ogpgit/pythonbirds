@@ -19,27 +19,27 @@ class Pessoa:
 
 if __name__ == '__main__':
     fabio = Pessoa(nome = 'Fabio Pires')
-    luciano = Pessoa(fabio, nome='Luciano')
-    print(id(luciano))
-    print(f'Nome: {luciano.nome} - Idade: {luciano.idade}')
-    for filhos in luciano.filhos:
-        print(filhos.nome)
-    luciano.sobrenome = 'Ramaho' # incluindo atributo dinâmicamente
-    del luciano.filhos # deletando atributo dinâmicamente
+    luciano = Pessoa(fabio, nome='Luciano')#
+    # print(id(luciano))
+    # print(f'Nome: {luciano.nome} - Idade: {luciano.idade}')
+    # for filhos in luciano.filhos:
+   #      print(filhos.nome)
+   #  luciano.sobrenome = 'Ramaho' # incluindo atributo dinâmicamente
+   #  del luciano.filhos # deletando atributo dinâmicamente
 
-    luciano.olhos = 1
-    print(luciano.__dict__)
-    print(fabio.__dict__)
-    print(luciano.sobrenome)
+    # luciano.olhos = 1
+    # print(luciano.__dict__)
+    # print(fabio.__dict__)
+    # print(luciano.sobrenome)
 
-    print(id(Pessoa.olhos))
-    print(id(luciano.olhos))
-    print(id(fabio.olhos))
+    # print(id(Pessoa.olhos))
+    # print(id(luciano.olhos))
+    # print(id(fabio.olhos))
     print(Pessoa.olhos)
-    print(luciano.olhos)
+    # print(luciano.olhos)
 
     # Chamada de método de classe @staticmethod
-    print(Pessoa.metodo_estatico(), luciano.metodo_estatico())
+    # print(Pessoa.metodo_estatico(), luciano.metodo_estatico())
     # Chamada de método de classe para acessar dados da própria classe @classmethod
-    print(Pessoa.nome_e_atributos_de_classe(), luciano.nome_e_atributos_de_classe())
+    # print(Pessoa.nome_e_atributos_de_classe(), luciano.nome_e_atributos_de_classe())
 

@@ -94,3 +94,4 @@ O     L
     >>> carro.calcular_direcao()
     'Oeste'
 """
+if __name__ == '__main__':
