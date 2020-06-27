@@ -29,12 +29,15 @@ Ele oferece os seguintes atributos:
 class Motor:
     velocidade = 0
 
-    def __init__(self):
-        pass
+    @classmethod
+    def acelerar(cls):
+        cls.velocidade += 1
 
 if __name__ == '__main__':
-    print(Motor.velocidade)
-    #m = Motor()
-    # print(m.velocidade)
-
-     #print(Motor.velocidade)
+    m1 = Motor()
+    m1.velocidade = 2
+    print(m1.velocidade)
+    m1.acelerar()
+    print(m1.velocidade)
+#    print(m1.acelerar())
+#    print(m1.velocidade)
