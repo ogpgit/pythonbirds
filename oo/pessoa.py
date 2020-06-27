@@ -1,4 +1,5 @@
 class Pessoa:
+    olhos = 2 # Atributo de classe
 
     def __init__(self, *filhos, nome=None, idade=None):
         self.idade = idade
@@ -17,6 +18,15 @@ if __name__ == '__main__':
         print(filhos.nome)
     luciano.sobrenome = 'Ramaho' # incluindo atributo dinâmicamente
     del luciano.filhos # deletando atributo dinâmicamente
+
+    luciano.olhos = 1
     print(luciano.__dict__)
     print(fabio.__dict__)
     print(luciano.sobrenome)
+
+    print(id(Pessoa.olhos))
+    print(id(luciano.olhos))
+    print(id(fabio.olhos))
+    print(Pessoa.olhos)
+    print(luciano.olhos)
+
