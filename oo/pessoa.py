@@ -10,8 +10,13 @@ class Pessoa:
 
 if __name__ == '__main__':
     fabio = Pessoa(nome = 'Fabio Pires')
-    osvaldo = Pessoa(fabio, nome='Osvaldo')
-    print(id(osvaldo))
-    print(f'Nome: {osvaldo.nome} - Idade: {osvaldo.idade}')
-    for filhos in osvaldo.filhos:
+    luciano = Pessoa(fabio, nome='Luciano')
+    print(id(luciano))
+    print(f'Nome: {luciano.nome} - Idade: {luciano.idade}')
+    for filhos in luciano.filhos:
         print(filhos.nome)
+    luciano.sobrenome = 'Ramaho' # incluindo atributo dinâmicamente
+    del luciano.filhos # deletando atributo dinâmicamente
+    print(luciano.__dict__)
+    print(fabio.__dict__)
+    print(luciano.sobrenome)
