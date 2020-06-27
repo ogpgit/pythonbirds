@@ -93,9 +93,4 @@ O     L
     >>> carro.girar_a_esquerda()
     >>> carro.calcular_direcao()
     'Oeste'
-
-
-
-
-
 """
