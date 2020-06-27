@@ -9,7 +9,7 @@ class Pessoa:
         return f'Olá {id(self)}'
 
 if __name__ == '__main__':
-    fabio = Pessoa(nome = 'Fabio')
+    fabio = Pessoa(nome = 'Fabio Pires')
     osvaldo = Pessoa(fabio, nome='Osvaldo')
     print(id(osvaldo))
     print(f'Nome: {osvaldo.nome} - Idade: {osvaldo.idade}')
