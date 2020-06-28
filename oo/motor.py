@@ -1,4 +1,10 @@
 """
+Você deve criar uma classe carro que vai possuir
+dois atributos compostos por outras duas classees:
+
+1) Motor
+2) Direção
+
 A classe Motor terá a responsabilidade de controlar a velocidade.
 Ele oferece os seguintes atributos:
 1) Atributo de dado velocidade
@@ -27,17 +33,22 @@ Ele oferece os seguintes atributos:
     0
 """
 class Motor:
-    velocidade = 0
+    #velocidade = 0
 
-    @classmethod
-    def acelerar(cls):
-        cls.velocidade += 1
+    def __init__(self, velocidade = 0):
+        self.velocidade = 0
+
+    def acelerar(self):
+        self.velocidade += 1
+
+    def frear(self):
+        if self.velocidade > 1:
+            self.velocidade -= 2
+        else:
+            self.velocidade = 0
 
 if __name__ == '__main__':
-    m1 = Motor()
-    m1.velocidade = 2
-    print(m1.velocidade)
-    m1.acelerar()
-    print(m1.velocidade)
-#    print(m1.acelerar())
-#    print(m1.velocidade)
+    motor = Motor()
+    motor.acelerar()
+    motor.acelerar()
+    print(motor.velocidade)
