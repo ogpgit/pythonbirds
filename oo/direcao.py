@@ -45,3 +45,61 @@ O     L
     >>> direcao.valor
     'Norte'
 """
+
+class Direcao:
+
+    def __init__(self):
+        self.indice_atual_da_direcao = 0
+        self.diercao_atual = ('Norte', 'Leste', 'Sul', 'Oeste')
+        self.valor = self.diercao_atual[self.indice_atual_da_direcao]
+
+    def girar_a_direita(self):
+        if self.indice_atual_da_direcao == 3:
+            self.indice_atual_da_direcao = 0
+        else:
+            self.indice_atual_da_direcao += 1
+        self.valor = self.diercao_atual[self.indice_atual_da_direcao]
+
+    def girar_a_esquerda(self):
+        if self.indice_atual_da_direcao == -3:
+            self.indice_atual_da_direcao = 0
+        else:
+            self.indice_atual_da_direcao -= 1
+        self.valor = self.diercao_atual[self.indice_atual_da_direcao]
+
+if __name__ == '__main__':
+    direcao = Direcao()
+    print(direcao.valor)
+
+    direcao.girar_a_direita()
+    print(direcao.valor)
+
+    direcao.girar_a_direita()
+    print(direcao.valor)
+
+    direcao.girar_a_direita()
+    print(direcao.valor)
+
+    direcao.girar_a_direita()
+    print(direcao.valor)
+
+    direcao.girar_a_esquerda()
+    print(direcao.valor)
+
+    direcao.girar_a_esquerda()
+    print(direcao.valor)
+
+    direcao.girar_a_esquerda()
+    print(direcao.valor)
+
+    direcao.girar_a_esquerda()
+    print(direcao.valor)
+
+    #Alternado
+    direcao.girar_a_esquerda()
+    print(direcao.valor)
+
+    direcao.girar_a_direita()
+    print(direcao.valor)
+
+

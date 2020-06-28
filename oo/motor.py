@@ -33,9 +33,8 @@ Ele oferece os seguintes atributos:
     0
 """
 class Motor:
-    #velocidade = 0
 
-    def __init__(self, velocidade = 0):
+    def __init__(self):
         self.velocidade = 0
 
     def acelerar(self):
