@@ -48,6 +48,47 @@ O     L
     >>> carro.calcular_direcao()
     'Oeste'
 """
+from oo.direcao import Direcao
+from oo.motor import Motor
 
 class Carro:
     pass
+
+    def __init__(self, direcao, motor):
+        self.direcao = direcao
+        self.motor = motor
+
+    def calcular_velocidade(self):
+        print(self.motor.velocidade)
+        #return self.motor.velocidade
+
+    def acelerar(self):
+        self.motor.acelerar()
+        #print(self.motor.velocidade)
+
+    def frear(self):
+        self.motor.frear()
+
+    def calcular_direcao(self):
+        print(self.direcao.valor)
+
+if __name__ == '__main__':
+    direcao = Direcao
+    motor = Motor()
+    carro = Carro(direcao, motor)
+    carro.calcular_velocidade()
+
+    carro.acelerar()
+    carro.calcular_velocidade()
+
+    carro.acelerar()
+    carro.calcular_velocidade()
+
+    carro.frear()
+    carro.calcular_velocidade()
+
+    #carro.calcular_direcao()
+
+
+
+
