@@ -48,6 +48,5 @@ O     L
     >>> carro.calcular_direcao()
     'Oeste'
 """
-
 class Carro:
     pass
