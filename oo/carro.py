@@ -17,12 +17,59 @@ os seguintes atributos:
 2 Método girar_a_direta
 2 Método girar_a_esquerda
 
-
    N
 O     L
    S
 
-    Exemplo:
+    >>> # Testando Motor
+    >>> motor = Motor()
+    >>> motor.velocidade
+    0
+    >>> motor.acelerar()
+    >>> motor.velocidade
+    1
+    >>> motor.acelerar()
+    >>> motor.velocidade
+    2
+    >>> motor.acelerar()
+    >>> motor.velocidade
+    3
+    >>> motor.frear()
+    >>> motor.velocidade
+    1
+    >>> motor.frear()
+    >>> motor.velocidade
+    0
+
+    >>> # Testando a Direcao
+    >>> direcao = Direcao()
+    >>> direcao.valor
+    'Norte'
+    >>> direcao.girar_a_direita()
+    >>> direcao.valor
+    'Leste'
+    >>> direcao.girar_a_direita()
+    >>> direcao.valor
+    'Sul'
+    >>> direcao.girar_a_direita()
+    >>> direcao.valor
+    'Oeste'
+    >>> direcao.girar_a_direita()
+    >>> direcao.valor
+    'Norte'
+    >>> direcao.girar_a_esquerda()
+    >>> direcao.valor
+    'Oeste'
+    >>> direcao.girar_a_esquerda()
+    >>> direcao.valor
+    'Sul'
+    >>> direcao.girar_a_esquerda()
+    >>> direcao.valor
+    'Leste'
+    >>> direcao.girar_a_esquerda()
+    >>> direcao.valor
+    'Norte'
+
     >>> # Testando Carro
     >>> carro = Carro(direcao, motor)
     >>> carro.calcular_velocidade()
@@ -47,48 +94,6 @@ O     L
     >>> carro.girar_a_esquerda()
     >>> carro.calcular_direcao()
     'Oeste'
+
+
 """
-from oo.direcao import Direcao
-from oo.motor import Motor
-
-class Carro:
-    pass
-
-    def __init__(self, direcao, motor):
-        self.direcao = direcao
-        self.motor = motor
-
-    def calcular_velocidade(self):
-        print(self.motor.velocidade)
-        #return self.motor.velocidade
-
-    def acelerar(self):
-        self.motor.acelerar()
-        #print(self.motor.velocidade)
-
-    def frear(self):
-        self.motor.frear()
-
-    def calcular_direcao(self):
-        print(self.direcao.valor)
-
-if __name__ == '__main__':
-    direcao = Direcao
-    motor = Motor()
-    carro = Carro(direcao, motor)
-    carro.calcular_velocidade()
-
-    carro.acelerar()
-    carro.calcular_velocidade()
-
-    carro.acelerar()
-    carro.calcular_velocidade()
-
-    carro.frear()
-    carro.calcular_velocidade()
-
-    #carro.calcular_direcao()
-
-
-
-

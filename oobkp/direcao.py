@@ -44,6 +44,7 @@ O     L
     >>> direcao.girar_a_esquerda()
     >>> direcao.valor
     'Norte'
+
 """
 
 class Direcao:
